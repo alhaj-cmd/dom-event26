@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Common way to event handeler</h1>
+        <h2 id="handeler">Defoult way to event Handeler</h2>
+        <button onclick="clickTo()">write your text</button>
+        <button id="event">click The Button</button>
+        <!-- <button onclick="click()">write your text</button> -->
+        <br>
+
+        <div>
+            <p id="btn-click">call me</p>
+            <label  for="text">Type your text</label>
+            <input id="inputField" type="text">
+            <button id="btnClick" >Click</button>
+        </div>
+        <div>
+            <p id="test-p">Hello Developer</p>
+            <input id="type-input" type="text">
+            <button id="btn-update">Update</button>
+        </div>
+    </div>
+    
+    <script>
+        function clickTo(){
+            const status = document.getElementById('handeler');
+            status.innerText = 'click the button';
+        }
+
+        // option two
+
+        document.getElementById('event').addEventListener('click',function(){
+            const status = document.getElementById('handeler');
+            status.innerText='Text formating';
+        })
+
+        // recabe
+        document.getElementById('btnClick').addEventListener('click',function (){
+            // console.log('update button');
+            const inputField =document.getElementById('inputField');
+            // console.log(inputField);
+            const inputText =inputField.value;
+
+            const p = document.getElementById('btn-click');
+            p.innerText=inputText;
+            inputField.value=' ';
+        })
+
+        // recabe
+        document.getElementById('btn-update').addEventListener('click', function (){
+            const inputBox = document.getElementById('type-input');
+            const inputT = inputBox.value;
+
+            const pt =document.getElementById('test-p');
+            console.log('paragrap')
+            // pt.innerText = inputtest;
+            pt.innerText=inputT;
+        })
+    </script>
+    
+</body>
+</html>
