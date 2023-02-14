@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div class="container container-area">
+            <h2>Recabe with basic event loop</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aspernatur aut dignissimos iste soluta enim.</p>
+            <p>Dignissimos architecto quam rerum, molestias earum illum, iste reprehenderit vitae accusamus neque, sit odio mollitia!</p>
+            <p>Corrupti, voluptatum consectetur. Magni quisquam adipisci architecto animi a harum at sed quia est praesentium?</p>
+            <p>Ducimus blanditiis pariatur doloremque aliquam possimus commodi eligendi temporibus harum nihil iste velit, cumque in?</p>
+        </div>
+        <div>
+            <textarea name="text" id="textId" cols="30" rows="10"></textarea>
+            <br>
+            <button id="btn-submit">Submit</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('btn-submit').addEventListener('click', function(){
+            const commentBox = document.getElementById('textId');
+            // console.log(commentBox);
+            const commentText = commentBox.value;
+
+            const comments = document.getElementById('container-area');
+            const p = document.createElement('p');
+            // console.log(p);
+            p.innerText= commentText;
+            commentText.appendChild('p');
+        })
+    </script>
+    
+</body>
+</html>
