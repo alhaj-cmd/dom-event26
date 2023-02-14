@@ -12,8 +12,8 @@
     <button id="btn-delete" disabled >Delete</button>
 
     <h1>Exploring Event Bubble</h1>
-    <section>
-        <ul>
+    <section id="list-section">
+        <ul id="list-ul">
             <li id="item-1">Lorem, ipsum.</li>
             <li id="item-2">Sequi, nostrum.</li>
             <li id="item-3">Eos, officia.</li>
@@ -40,6 +40,17 @@
             const secret = document.getElementById('secret-info');
             secret.style.display = 'none';
 
+        })
+    </script>
+    <script>
+        document.getElementById('item-2').addEventListener('click', function(){
+            console.log('list item');
+        })
+        document.getElementById('list-ul').addEventListener('click', function(){
+            console.log('list item ul');
+        })
+        document.getElementById('list-section').addEventListener('click', function(){
+            console.log('list item section');
         })
     </script>
 </body>
