@@ -69,15 +69,27 @@
     </script>
     <!-- class 26-8 -->
     <script>
-        const items = document.getElementsByClassName('item');
-        for(const item of items){
-            item.addEventListener('click', function(event){
-                // console.log(item);
-                event.target.parentNode.removeChild(event.target)
-            })
-        }
+        // const items = document.getElementsByClassName('item');
+        // for(const item of items){
+        //     item.addEventListener('click', function(event){
+        //         // console.log(item);
+        //         event.target.parentNode.removeChild(event.target)
+        //     })
+        // }
+
+        // delegates
+        document.getElementById('list-container').addEventListener('click',function(event){
+            // console.log(event.target);
+            event.target.parentNode.removeChild(event.target);
+        })
         document.getElementById('btn-item').addEventListener('click',function(){
-            
+            const listContainer = document.getElementById('list-container');
+
+            const li = document.createElement('li');
+            li.innerText = 'New item added';
+            li.classList.add('item');
+            listContainer.appendChild(li);
+
         } )
 
     </script>
