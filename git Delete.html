@@ -7,10 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- class 26-6 -->
     <h1 id="secret-info" >My sectect Info</h1>
     <input type="text" id="delete-confirm" placeholder="please type Delete">
     <button id="btn-delete" disabled >Delete</button>
-
+<!-- class 26-7 -->
     <h1>Exploring Event Bubble</h1>
     <section id="list-section">
         <ul id="list-ul">
@@ -22,7 +23,17 @@
             <li id="item-6">Doloremque, iure?</li>
         </ul>
     </section>
-
+    <!-- class 26-8 -->
+    <section>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum.</li>
+            <li class="item">Adipisci, aliquam!</li>
+            <li class="item">Quasi, eum.</li>
+            <li class="item">Praesentium, aliquam?</li>
+            <li class="item">Eum, deleniti.</li>
+        </ul>
+    </section>
+<!-- class 26-6 -->
     <script>
         document.getElementById('delete-confirm').addEventListener('keyup', function(event){
             const text = event.target.value;
@@ -42,10 +53,11 @@
 
         })
     </script>
+    <!-- class 26-7 -->
     <script>
         document.getElementById('item-2').addEventListener('click', function(){
             console.log('list item');
-            event.stopPropagation();
+            event.stopPropagation(); 
         })
         document.getElementById('list-ul').addEventListener('click', function(){
             console.log('list item ul');
@@ -53,6 +65,11 @@
         document.getElementById('list-section').addEventListener('click', function(){
             console.log('list item section');
         })
+    </script>
+    <!-- class 26-8 -->
+    <script>
+
+
     </script>
 </body>
 </html>
